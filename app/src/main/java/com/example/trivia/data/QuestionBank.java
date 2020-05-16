@@ -23,6 +23,7 @@ public class QuestionBank {
                  null, new Response.Listener<JSONArray>() {
         @Override
         public void onResponse(JSONArray response) {
+            questions = new ArrayList<>();
             for (int i = 0; i < response.length(); i++){
                 try {
                     JSONArray jsonArray = response.getJSONArray(i);
